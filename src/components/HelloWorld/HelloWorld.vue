@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <span class="hello-msg">{{ msg }}</span>
   </div>
 </template>
 
@@ -12,3 +12,7 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+@import './HelloWorld.scss';
+</style>
