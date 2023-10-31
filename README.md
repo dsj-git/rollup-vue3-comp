@@ -22,3 +22,5 @@ pnpm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+pnpm i node-sass@^6.0.0 autoprefixer -D

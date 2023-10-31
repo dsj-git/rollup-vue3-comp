@@ -1,5 +1,5 @@
 <template>
-    <button class="btn-noraml" :style="{ backgroundColor: defaultVari(variant) }" @click="click">{{ text }}</button>
+    <button class="btn-noraml" :style="defaultVari" :disabled="disabled" @click="click">{{ text }}</button>
 </template>
 <script>
 export default {
@@ -9,22 +9,22 @@ export default {
         variant: {
             type: String,
             default: ''
-        }
+        },
+        disabled: Boolean
     },
     computed: {
-        defaultVari(){
-            return this.variant === 'primary' ? '#dac' : 'aqua'
+        defaultVari() {
+            return `backgroundColor:${this.variant === 'primary' ? '#dac' : this.disabled ? '#dbdbdb' : 'aqua'}`
         }
     },
     methods: {
-        click(){
+        click() {
             this.$emit('click')
         }
     }
 }
 </script>
 
-
-<style>
-@import './DButton.css';
+<style lang="scss" scoped>
+@import './DButton.scss';
 </style>
